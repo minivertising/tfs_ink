@@ -2,7 +2,8 @@
 	include_once   "./header.php";
 	$serial	= BC_getSerial();
 
-	if (!$_SESSION['ss_serial'])
+	session_unset();
+	//if (!$_SESSION['ss_serial'])
 		$_SESSION['ss_serial']	= $serial;
 
 	print_r($_SESSION['ss_serial']);
@@ -263,18 +264,6 @@ function go_submit()
 		return false;
 	}
 */
-	var mb_name				= $("#mb_name").val();
-	var mb_phone				= mb_phone1 + mb_phone2 + mb_phone3;
-	var mb_sns					= $("#mb_sns").val();
-	var mb_photo1				= img_name1;
-	var mb_photo2				= img_name2;
-	var mb_photo3				= img_name3;
-	var mb_photo4				= img_name4;
-	var mb_photo5				= img_name5;
-	mb_magazineYN		= $(':radio[name="mb_magazine"]:checked').val();
-	var mb_university			= $("#mb_university").val();
-	var mb_major				= $("#mb_major").val();
-
 	$.ajax({
 		type:"POST",
 		data:{

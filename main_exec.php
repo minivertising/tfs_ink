@@ -24,11 +24,28 @@ switch ($_REQUEST['exec'])
 		$mb_phone			= $_REQUEST['mb_phone'];
 		$mb_sns				= $_REQUEST['mb_sns'];
 		$mb_serial			= $_REQUEST['mb_serial'];
+		$mb_photo1_arr	= explode(".",$_REQUEST['mb_photo1']);
+		$arr_num1			= count($mb_photo1_arr) -1;
+		$mb_photo1		= $mb_serial."_1.".$mb_photo1_arr[$arr_num1];
+		$mb_photo2_arr	= explode(".",$_REQUEST['mb_photo2']);
+		$arr_num2			= count($mb_photo2_arr) -1;
+		$mb_photo2		= $mb_serial."_2.".$mb_photo2_arr[$arr_num2];
+		$mb_photo3_arr	= explode(".",$_REQUEST['mb_photo3']);
+		$arr_num3			= count($mb_photo3_arr) -1;
+		$mb_photo3		= $mb_serial."_3.".$mb_photo3_arr[$arr_num3];
+		$mb_photo4_arr	= explode(".",$_REQUEST['mb_photo4']);
+		$arr_num4			= count($mb_photo4_arr) -1;
+		$mb_photo4		= $mb_serial."_4.".$mb_photo4_arr[$arr_num4];
+		$mb_photo5_arr	= explode(".",$_REQUEST['mb_photo5']);
+		$arr_num5			= count($mb_photo5_arr) -1;
+		$mb_photo5		= $mb_serial."_5.".$mb_photo5_arr[$arr_num5];
+/*
 		$mb_photo1		= $_REQUEST['mb_photo1'];
 		$mb_photo2		= $_REQUEST['mb_photo2'];
 		$mb_photo3		= $_REQUEST['mb_photo3'];
 		$mb_photo4		= $_REQUEST['mb_photo4'];
 		$mb_photo5		= $_REQUEST['mb_photo5'];
+*/
 		$mb_magazineYN	= $_REQUEST['mb_magazineYN'];
 		$mb_university		= $_REQUEST['mb_university'];
 		$mb_major			= $_REQUEST['mb_major'];
@@ -51,20 +68,6 @@ switch ($_REQUEST['exec'])
 				$flag	= "N";
 		}
 		echo $query;
-	break;
-
-	case "use_coupon" :
-		$mb_phone			= $_REQUEST['mb_phone'];
-
-		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_use='Y', mb_usedate='".date("Y-m-d H:i:s")."' WHERE mb_phone='".$mb_phone."'";
-		$result 	= mysqli_query($my_db, $query);
-
-		if ($result)
-			$flag	= "Y";
-		else
-			$flag	= "N";
-		
-		echo $flag;
 	break;
 }
 ?>
