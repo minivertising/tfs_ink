@@ -1,5 +1,5 @@
 <?php
-include_once "config.belif";
+include_once "config.php";
 
 switch ($_REQUEST['exec'])
 {
@@ -22,7 +22,17 @@ switch ($_REQUEST['exec'])
 	case "insert_info" :
 		$mb_name			= $_REQUEST['mb_name'];
 		$mb_phone			= $_REQUEST['mb_phone'];
-		$mb_shop			= $_REQUEST['mb_shop'];
+		$mb_sns				= $_REQUEST['mb_sns'];
+		$mb_serial			= $_REQUEST['mb_serial'];
+		$mb_photo1		= $_REQUEST['mb_photo1'];
+		$mb_photo2		= $_REQUEST['mb_photo2'];
+		$mb_photo3		= $_REQUEST['mb_photo3'];
+		$mb_photo4		= $_REQUEST['mb_photo4'];
+		$mb_photo5		= $_REQUEST['mb_photo5'];
+		$mb_magazineYN	= $_REQUEST['mb_magazineYN'];
+		$mb_university		= $_REQUEST['mb_university'];
+		$mb_major			= $_REQUEST['mb_major'];
+		$sel_radio			= $_REQUEST['sel_radio'];
 		$media				= $_SESSION['ss_media'];
 
 		$dupli_query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_phone='".$mb_phone."'";
@@ -33,16 +43,14 @@ switch ($_REQUEST['exec'])
 		{
 			$flag	= "D";
 		}else{
-			$serial	= BC_getSerial();
-			$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr,mb_name,mb_phone,mb_shop,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_shop."','".date("Y-m-d H:i:s")."','".$serial."','".$gubun."','".$media."')";
+			$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr,mb_name,mb_phone,mb_sns,mb_photo1,mb_photo2,mb_photo3,mb_photo4,mb_photo5,mb_nominees,mb_magazineYN,mb_university,mb_major,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_sns."','".$mb_photo1."','".$mb_photo2."','".$mb_photo3."','".$mb_photo4."','".$mb_photo5."','".$sel_radio."','".$mb_magazineYN."','".$mb_university."','".$mb_major."','".date("Y-m-d H:i:s")."','".$mb_serial."','".$gubun."','".$media."')";
 			$result 	= mysqli_query($my_db, $query);
-			send_lms($mb_phone);
 			if ($result)
 				$flag	= "Y";
 			else
 				$flag	= "N";
 		}
-		echo $flag;
+		echo $query;
 	break;
 
 	case "use_coupon" :

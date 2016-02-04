@@ -1,5 +1,4 @@
 <?php
-	exit;
 	session_start();
     header("Content-Type: text/html; charset=UTF-8");
 	//환경설정 파일
