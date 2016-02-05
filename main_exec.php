@@ -50,7 +50,7 @@ switch ($_REQUEST['exec'])
 		$mb_university		= $_REQUEST['mb_university'];
 		$mb_major			= $_REQUEST['mb_major'];
 		$sel_radio			= $_REQUEST['sel_radio'];
-		$media				= $_SESSION['ss_media'];
+		//$media				= $_SESSION['ss_media'];
 
 		$dupli_query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_phone='".$mb_phone."'";
 		$dupli_result 	= mysqli_query($my_db, $dupli_query);
