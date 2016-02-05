@@ -1,5 +1,5 @@
 <?
-	include_once "config.belif";
+	include_once "config.php";
 
 	//unset($media);
 	$media	= $_REQUEST['media'];
