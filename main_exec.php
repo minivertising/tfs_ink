@@ -49,6 +49,7 @@ switch ($_REQUEST['exec'])
 		$mb_magazineYN	= $_REQUEST['mb_magazineYN'];
 		$mb_university		= $_REQUEST['mb_university'];
 		$mb_major			= $_REQUEST['mb_major'];
+		$mb_media			= $_REQUEST['mb_media'];
 		$sel_radio			= $_REQUEST['sel_radio'];
 		//$media				= $_SESSION['ss_media'];
 
@@ -60,14 +61,14 @@ switch ($_REQUEST['exec'])
 		{
 			$flag	= "D";
 		}else{
-			$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr,mb_name,mb_phone,mb_sns,mb_photo1,mb_photo2,mb_photo3,mb_photo4,mb_photo5,mb_nominees,mb_magazineYN,mb_university,mb_major,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_sns."','".$mb_photo1."','".$mb_photo2."','".$mb_photo3."','".$mb_photo4."','".$mb_photo5."','".$sel_radio."','".$mb_magazineYN."','".$mb_university."','".$mb_major."','".date("Y-m-d H:i:s")."','".$mb_serial."','".$gubun."','".$media."')";
+			$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr,mb_name,mb_phone,mb_sns,mb_photo1,mb_photo2,mb_photo3,mb_photo4,mb_photo5,mb_nominees,mb_magazineYN,mb_university,mb_major,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_sns."','".$mb_photo1."','".$mb_photo2."','".$mb_photo3."','".$mb_photo4."','".$mb_photo5."','".$sel_radio."','".$mb_magazineYN."','".$mb_university."','".$mb_major."','".date("Y-m-d H:i:s")."','".$mb_serial."','".$gubun."','".$mb_media."')";
 			$result 	= mysqli_query($my_db, $query);
 			if ($result)
 				$flag	= "Y";
 			else
 				$flag	= "N";
 		}
-		echo $_SESSION;
+		echo $flag;
 	break;
 }
 ?>

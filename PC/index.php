@@ -2,6 +2,7 @@
 	include_once   "./header.php";
 	$serial	= BC_getSerial();
 
+	$ss_media	= $_SESSION['ss_media'];
 	session_unset();
 	//if (!$_SESSION['ss_serial'])
 		$_SESSION['ss_serial']	= $serial;
@@ -297,11 +298,17 @@ function go_submit()
 			"mb_university"			: mb_university,
 			"mb_major"				: mb_major,
 			"sel_radio"				: sel_radio,
-			"mb_serial"				: "<?=$_SESSION['ss_serial']?>"
+			"mb_serial"				: "<?=$_SESSION['ss_serial']?>",
+			"mb_media"				: "<?=$ss_media?>"
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			console.log(response);
+			if (response == "Y")
+			{
+				alert("이벤트 참여가 완료되었습니다.");
+			}else{
+				alert("참여자가 많아 지연되고 있습니다. 다시 응모해 주세요.");
+			}
 		}
 	});
 }
