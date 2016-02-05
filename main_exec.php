@@ -67,7 +67,7 @@ switch ($_REQUEST['exec'])
 			else
 				$flag	= "N";
 		}
-		echo $query;
+		echo $_SESSION;
 	break;
 }
 ?>
