@@ -39,13 +39,6 @@ switch ($_REQUEST['exec'])
 		$mb_photo5_arr	= explode(".",$_REQUEST['mb_photo5']);
 		$arr_num5			= count($mb_photo5_arr) -1;
 		$mb_photo5		= $mb_serial."_5.".$mb_photo5_arr[$arr_num5];
-/*
-		$mb_photo1		= $_REQUEST['mb_photo1'];
-		$mb_photo2		= $_REQUEST['mb_photo2'];
-		$mb_photo3		= $_REQUEST['mb_photo3'];
-		$mb_photo4		= $_REQUEST['mb_photo4'];
-		$mb_photo5		= $_REQUEST['mb_photo5'];
-*/
 		$mb_magazineYN	= $_REQUEST['mb_magazineYN'];
 		$mb_university		= $_REQUEST['mb_university'];
 		$mb_major			= $_REQUEST['mb_major'];
@@ -53,6 +46,7 @@ switch ($_REQUEST['exec'])
 		$sel_radio			= $_REQUEST['sel_radio'];
 		//$media				= $_SESSION['ss_media'];
 
+		// 중복 체크
 		$dupli_query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_phone='".$mb_phone."'";
 		$dupli_result 	= mysqli_query($my_db, $dupli_query);
 		$dupli_cnt	= mysqli_num_rows($dupli_result);
@@ -68,6 +62,7 @@ switch ($_REQUEST['exec'])
 			else
 				$flag	= "N";
 		}
+		// $flag=D ( 중복 ), Y ( 참여완료 ), N ( 오류 )
 		echo $flag;
 	break;
 }
