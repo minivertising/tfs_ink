@@ -13,10 +13,10 @@
 
 	if($gubun == "MOBILE")
 	{
-		Header("Location:http://www.belif-factory.com/MOBILE/index.belif?media=".$media."");
+		Header("Location:http://www.thefaceshop-event.com/MOBILE/index.php?media=".$media."");
 		exit;
 	}else{
-		Header("Location:http://www.belif-factory.com/PC/index.belif?media=".$media."");
+		Header("Location:http://www.thefaceshop-event.com/PC/index.php?media=".$media."");
 		exit;
 	}
 

@@ -147,10 +147,15 @@ SNS주소 : <input type="text" name="mb_sns" id="mb_sns"><br />
 대학내일 표지 모델 응모여부 : 네 <input type="radio" name="mb_magazine" value="Y">    아니요 <input type="radio" name="mb_magazine" value="N"><br />
 대학교 : <input type="text" name="mb_university" id="mb_university"><br />
 전공 : <input type="text" name="mb_major" id="mb_major"><br />
-<input type="checkbox" name="mb_check" id="mb_check"> <a href="#">개인정보 취급동의/광고 동의</a><br />
+<input type="checkbox" name="mb_privacy_check" id="mb_privacy_check"> <a href="#" onclick="open_pop('privacy_agree_popup');return false;">개인정보 취급동의</a><br />
+<input type="checkbox" name="mb_adver_check" id="mb_adver_check"> <a href="#" onclick="open_pop('adver_agree_popup');return false;">광고성 정보전송 동의</a><br />
 <input type="checkbox" name="mb_meet_check" id="mb_meet_check"> <a href="#">면접 동의</a><br />
 <a href="#" onclick="go_submit();return false;">지원하기</a>
 </div>
+<?
+	include_once   "./popup_div.php";
+?>
+
 </body>
 </html>
 <script type="text/javascript">
@@ -161,6 +166,18 @@ var img_name4		= null;
 var img_name5		= null;
 var sel_radio			= null;
 var mb_magazineYN = null;
+
+$(document).ready(function() {
+	$("#cboxTopLeft").hide();
+	$("#cboxTopRight").hide();
+	$("#cboxBottomLeft").hide();
+	$("#cboxBottomRight").hide();
+	$("#cboxMiddleLeft").hide();
+	$("#cboxMiddleRight").hide();
+	$("#cboxTopCenter").hide();
+	$("#cboxBottomCenter").hide();
+});
+
 function go_submit()
 {
 	var mb_name				= $("#mb_name").val();
@@ -725,6 +742,27 @@ function apply_member()
 
 	$("#rip_area").hide();
 	$("#input_area").show();
+}
+
+function open_pop(param)
+{
+	if (param == "privacy_agree_popup")
+	{
+		var pop_w	= "474px";
+		var pop_h	= "459px";
+		var pop_oh	= "417px";
+	}else if (param == "adver_agree_popup")
+	{
+		var pop_w	= "474px";
+		var pop_h	= "482px";
+		var pop_oh	= "440px";
+	}
+	$.colorbox({width:pop_w, height:pop_h, inline:true, opacity:"0.9", scrolling:false, closeButton:false, overlayClose: false, fadeOut: 300, href:"#"+param, onComplete: function(){
+		$("#cboxLoadedContent").height(pop_oh);
+		$("#cboxContent").css("background","none");
+	},
+	onClosed: function(){
+	}});
 }
 
 </script>
