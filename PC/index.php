@@ -7,7 +7,7 @@
 	//if (!$_SESSION['ss_serial'])
 		$_SESSION['ss_serial']	= $serial;
 
-	print_r($_SESSION['ss_serial']);
+	//print_r($_SESSION['ss_serial']);
 ?>
 <body>
 <!-- <div id="rip_area">
