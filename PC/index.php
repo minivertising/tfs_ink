@@ -113,7 +113,7 @@
       <div class="btn_block two">
         <div class="inner clearfix">
           <div class="left">
-            <a href="#"><img src="images/popup/btn_before.jpg" alt=""/></a>
+            <a href="index.php"><img src="images/popup/btn_before.jpg" alt=""/></a>
           </div>
           <div class="right">
             <a href="#" onclick="go_next();return false;"><img src="images/popup/btn_next.jpg" alt=""/></a>
@@ -267,7 +267,7 @@
       <div class="btn_block two">
         <div class="inner clearfix">
           <div class="left">
-            <a href=""><img src="images/popup/btn_before.jpg" alt=""/></a>
+            <a href="index.php"><img src="images/popup/btn_before.jpg" alt=""/></a>
           </div>
           <div class="right">
             <a href="#" onclick="go_comp();return false;"><img src="images/popup/btn_comp.jpg" alt=""/></a>
@@ -339,7 +339,7 @@
       <div class="btn_block two">
         <div class="inner clearfix">
           <div class="left">
-            <a href=""><img src="images/popup/btn_before.jpg" alt=""/></a>
+            <a href="index.php"><img src="images/popup/btn_before.jpg" alt=""/></a>
           </div>
           <div class="right">
             <a href="#" onclick="go_dhni_comp();return false;"><img src="images/popup/btn_comp.jpg" alt=""/></a>
@@ -389,7 +389,7 @@
         <div class="inner comp2">
           <div class="txt"><img src="images/popup/txt_comp_model.jpg" alt=""/></div>
           <div class="btn_in">
-            <a href="#"><img src="images/popup/btn_ok.jpg" alt=""/></a>
+            <a href="index.php"><img src="images/popup/btn_ok.jpg" alt=""/></a>
           </div>
         </div>
       </div>
@@ -398,21 +398,6 @@
 </div>
 <!--개인정보입력 완료 ( 대학내일 지원안함 ) -->
 
-
-
-<div id="input_area_bak" style="display:none">
-이름 : <input type="text" name="mb_name" id="mb_name"><br />
-전화번호 : <input type="text" name="mb_phone1" id="mb_phone1"> - <input type="text" name="mb_phone2" id="mb_phone2"> - <input type="text" name="mb_phone3" id="mb_phone3"><br />
-SNS주소 : <input type="text" name="mb_sns" id="mb_sns"><br />
-<br />
-대학내일 표지 모델 응모여부 : 네 <input type="radio" name="mb_magazine" value="Y">    아니요 <input type="radio" name="mb_magazine" value="N"><br />
-대학교 : <input type="text" name="mb_university" id="mb_university"><br />
-전공 : <input type="text" name="mb_major" id="mb_major"><br />
-<input type="checkbox" name="mb_privacy_check" id="mb_privacy_check"> <a href="#" onclick="open_pop('privacy_agree_popup');return false;">개인정보 취급동의</a><br />
-<input type="checkbox" name="mb_adver_check" id="mb_adver_check"> <a href="#" onclick="open_pop('adver_agree_popup');return false;">광고성 정보전송 동의</a><br />
-<input type="checkbox" name="mb_meet_check" id="mb_meet_check"> <a href="#">면접 동의</a><br />
-<a href="#" onclick="go_submit();return false;">지원하기</a>
-</div>
 <?
 	include_once   "./popup_div.php";
 ?>

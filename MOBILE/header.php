@@ -8,12 +8,11 @@
   <html>
     <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, user-scalable=yes,initial-scale=1.0, maximum-scale=3.0"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
       <link rel="shortcut icon" type="image/x-icon" href="./images/fabicon.ico" />
       <title>2016 THEFACESHOP LIP MODEL</title>
-      <link href="css/style_yang.css" rel="stylesheet" type="text/css">
+      <link href="css/style.css" rel="stylesheet" type="text/css">
       <!-- Generic page styles -->
       <link rel="stylesheet" href="../lib/jQuery-File-Upload/css/style.css">
       <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
@@ -21,7 +20,7 @@
       <link rel="stylesheet" href="../lib/colorbox/colorbox.css">
       <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
       <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-      <script type="text/javascript" src="../js/main.js"></script>
+      <script type="text/javascript" src="../js/m_main.js"></script>
       <script type="text/javascript" src="../lib/colorbox/jquery.colorbox-min.js"></script>
       <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
       <script src="../lib/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
