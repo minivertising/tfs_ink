@@ -14,7 +14,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>빌리프 - Where's Billy</title>
+    <title>더페이스샵 - 모델지원</title>
 	<!-- jQuery Version 1.11.0 -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
@@ -51,7 +51,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="daily_influx_count.php">빌리프 - Where's Billy</a>
+          <a class="navbar-brand" href="daily_influx_count.php">더페이스샵 - 모델지원</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">

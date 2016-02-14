@@ -1,7 +1,7 @@
 <?php
 
 	// 설정파일
-	include_once "../config.belif";
+	include_once "../config.php";
 
 /*
 	if (isset($_SESSION['ss_mb_id']) == false)
@@ -101,15 +101,21 @@
             <thead>
               <tr>
                 <th>순번</th>
-                <th>IP주소</th>
                 <th>이름</th>
                 <th>전화번호</th>
-                <th>선택한 매장</th>
-                <th>유입경로</th>
+                <th>사진1</th>
+                <th>사진2</th>
+                <th>사진3</th>
+                <th>사진4</th>
+                <th>사진5</th>
+                <th>SNS주소</th>
+                <th>선택한 상품</th>
                 <th>유입매체</th>
+                <th>유입구분</th>
                 <th>참여일자</th>
-                <th>쿠폰 사용여부</th>
-                <th>쿠폰 사용일자</th>
+                <th>대학내일 모델 선택여부</th>
+                <th>대학교</th>
+                <th>전공</th>
               </tr>
             </thead>
             <tbody>
@@ -141,25 +147,32 @@
 
 	foreach($buyer_info as $key => $val)
 	{
-		$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE idx='".$buyer_info[$key]['mb_shop']."'";
-		$shop_res = mysqli_query($my_db, $shop_query);
-		$shop_name = mysqli_fetch_array(mysqli_query($my_db, $shop_query));
+		//$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE idx='".$buyer_info[$key]['mb_shop']."'";
+		//$shop_res = mysqli_query($my_db, $shop_query);
+		//$shop_name = mysqli_fetch_array(mysqli_query($my_db, $shop_query));
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $buyer_info[$key]['mb_ipaddr']?></td>
                 <td><?php echo $buyer_info[$key]['mb_name']?></td>
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
-                <td><?php echo $shop_name['shop_name']?></td>
+                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo1']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo1']?>"></a></td>
+                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo2']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo2']?>"></a></td>
+                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo3']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo3']?>"></a></td>
+                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo4']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo4']?>"></a></td>
+                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo5']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo5']?>"></a></td>
+                <td><?php echo $buyer_info[$key]['mb_sns']?></td>
+                <td><?php echo $buyer_info[$key]['mb_nominees']?></td>
                 <td><?php echo $buyer_info[$key]['mb_media']?></td>
                 <td><?php echo $buyer_info[$key]['mb_gubun']?></td>
                 <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
-                <td><?php echo $buyer_info[$key]['mb_use']?></td>
-                <td><?php echo $buyer_info[$key]['mb_usedate']?></td>
+                <td><?php echo $buyer_info[$key]['mb_magazineYN']?></td>
+                <td><?php echo $buyer_info[$key]['mb_university']?></td>
+                <td><?php echo $buyer_info[$key]['mb_major']?></td>
               </tr>
 <?php 
 	}
 ?>
+
               <tr><td colspan="10"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
             </tbody>
           </table>
@@ -180,12 +193,15 @@
 
 <script type="text/javascript">
  
-	function pageRun(num)
-	{
-		f = document.frm_execute;
-		f.pg.value = num;
-		f.submit();
-	}
+function pageRun(num)
+{
+	f = document.frm_execute;
+	f.pg.value = num;
+	f.submit();
+}
 
+$(document).ready(function(){
+	$("#page-wrapper").width($(window).width()+225);
+});
 
 </script>
