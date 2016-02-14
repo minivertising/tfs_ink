@@ -33,7 +33,7 @@
 			break;
 		}
 	}
-
+/*
 	if(stripos( $_SERVER['HTTP_USER_AGENT'], "MSIE 7.0" ))
 		$IE7	= "Y";
 	else
@@ -63,16 +63,22 @@
 	}else{
 		$iphone_banner_gubun	= "N";
 	}
-
+*/
 	if($check_mobile == "Y")
 		$gubun = "MOBILE";
 	else
 		$gubun = "PC";
 
-	if (!$_SESSION['ss_media'])
+	if (!isset($_SESSION['ss_media']))
 	{
-		$media						= $_REQUEST['media'];
-		$_SESSION['ss_media']	= $media;
+		if (isset($_REQUEST['media']))
+		{
+			$media						= $_REQUEST['media'];
+			$_SESSION['ss_media']	= $media;
+		}else{
+			$media						= "";
+			$_SESSION['ss_media']	= $media;
+		}
 	}
 
 ?>

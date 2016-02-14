@@ -121,7 +121,7 @@
 		$result		= mysqli_query($my_db, $query);
 		$data			= mysqli_fetch_array($result);
 
-		$query2		= "UPDATE ".$_gl['serial_info_table']." SET useYN='Y' WHERE serial_code='".$data[serial_code]."'";
+		$query2		= "UPDATE ".$_gl['serial_info_table']." SET useYN='Y' WHERE serial_code='".$data['serial_code']."'";
 		$result2		= mysqli_query($my_db, $query2);
 
 		return $data['serial_code'];

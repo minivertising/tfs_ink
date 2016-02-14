@@ -1,19 +1,14 @@
-function go_submit()
+function go_next()
 {
-	var mb_name				= $("#mb_name").val();
-	var mb_phone1				= $("#mb_phone1").val();
-	var mb_phone2				= $("#mb_phone2").val();
-	var mb_phone3				= $("#mb_phone3").val();
-	var mb_phone				= mb_phone1 + mb_phone2 + mb_phone3;
-	var mb_sns					= $("#mb_sns").val();
-	var mb_photo1				= img_name1;
-	var mb_photo2				= img_name2;
-	var mb_photo3				= img_name3;
-	var mb_photo4				= img_name4;
-	var mb_photo5				= img_name5;
-	mb_magazineYN		= $(':radio[name="mb_magazine"]:checked').val();
-	var mb_university			= $("#mb_university").val();
-	var mb_major				= $("#mb_major").val();
+	mb_name				= $("#mb_name").val();
+	mb_phone1				= $("#mb_phone1").val();
+	mb_phone2				= $("#mb_phone2").val();
+	mb_phone3				= $("#mb_phone3").val();
+	mb_phone				= mb_phone1 + mb_phone2 + mb_phone3;
+	mb_sns					= $("#mb_sns").val();
+	//mb_magazineYN		= $(':radio[name="mb_magazine"]:checked').val();
+	//var mb_university			= $("#mb_university").val();
+	//var mb_major				= $("#mb_major").val();
 
 	if (mb_name == "")
 	{
@@ -63,73 +58,65 @@ function go_submit()
 		return false;
 	}
 
-	if (mb_photo1 === null && mb_photo2 === null && mb_photo3 === null && mb_photo4 === null && mb_photo5 === null )
+	if (chk_privacy_flag == 0)
 	{
-		alert('사진을 1장 이상 첨부해 주세요.');
+		alert("개인정보 수집 및 위탁에 관한 동의를 안 하셨습니다");
 		//chk_ins = 0;
 		return false;
 	}
 
-	if (mb_magazineYN === undefined)
+	if (chk_adver_flag == 0)
 	{
-		alert('대학내일 표지 모델 응모 여부를 선택해 주세요.');
+		alert("광고성 정보전송 동의를 안 하셨습니다");
 		//chk_ins = 0;
 		return false;
 	}
 
-	if (mb_magazineYN == "Y" && mb_university == "")
-	{
-		alert('대학교를 선택해 주세요.');
-		$("#mb_university").focus();
-		//chk_ins = 0;
-		return false;
-	}
+	$("#input_area1").hide();
+	$("#input_area2").show();
+}
 
-	if (mb_magazineYN == "Y" && mb_major == "")
-	{
-		alert('전공을 선택해 주세요.');
-		$("#mb_major").focus();
-		//chk_ins = 0;
-		return false;
-	}
+function go_dhni_comp()
+{
+	mb_university			= $("#mb_university").val();
+	mb_major				= $("#mb_major").val();
 
-/*
-	if (chk_mb_flag == 0)
-	{
-		alert("개인정보 취급 동의/광고동의를 안 하셨습니다");
-		//chk_ins = 0;
-		return false;
-	}
-*/
 	$.ajax({
 		type:"POST",
 		data:{
-			"exec"					: "insert_info",
-			"mb_name"				: mb_name,
+			"exec"					: "update_info",
 			"mb_phone"				: mb_phone,
-			"mb_sns"					: mb_sns,
-			"mb_photo1"			: mb_photo1,
-			"mb_photo2"			: mb_photo2,
-			"mb_photo3"			: mb_photo3,
-			"mb_photo4"			: mb_photo4,
-			"mb_photo5"			: mb_photo5,
-			"mb_magazineYN"		: mb_magazineYN,
 			"mb_university"			: mb_university,
-			"mb_major"				: mb_major,
-			"sel_radio"				: sel_radio,
-			"mb_serial"				: "<?=$_SESSION['ss_serial']?>",
-			"mb_media"				: "<?=$ss_media?>"
+			"mb_major"				: mb_major
 		},
 		url: "../main_exec.php",
 		success: function(response){
+			alert(response);
 			if (response == "Y")
 			{
-				alert("이벤트 참여가 완료되었습니다.");
+				$("#input_area4").hide();
+				$("#comp_area2").show();
 			}else{
 				alert("참여자가 많아 지연되고 있습니다. 다시 응모해 주세요.");
+				location.href="index.php";
 			}
 		}
 	});
+
+}
+
+function comp_proc(param)
+{
+	if (param == "1")
+	{
+		$("#input_area3").hide();
+		$("#input_area4").show();
+		mb_magazineYN = "Y";
+	}else{
+		$("#input_area3").hide();
+		$("#comp_area1").show();
+		mb_magazineYN = "N";
+	}
 }
 
 $(function () {
@@ -147,8 +134,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 100,
-        previewMaxHeight: 100,
+        previewMaxWidth: 50,
+        previewMaxHeight: 50,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -160,7 +147,7 @@ $(function () {
 			img_name1 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
-			  //$("#image_up_name").val(file.name);
+			  $("#image_up_name1").val(file.name);
             if (!index) {
                 //node
                   //  .append('<br>')
@@ -233,8 +220,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 100,
-        previewMaxHeight: 100,
+        previewMaxWidth: 50,
+        previewMaxHeight: 50,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -245,7 +232,7 @@ $(function () {
 			img_name2 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
-			  //$("#image_up_name").val(file.name);
+			  $("#image_up_name2").val(file.name);
             if (!index) {
                 //node
                   //  .append('<br>')
@@ -318,8 +305,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 100,
-        previewMaxHeight: 100,
+        previewMaxWidth: 50,
+        previewMaxHeight: 50,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -330,7 +317,7 @@ $(function () {
 			img_name3 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
-			  //$("#image_up_name").val(file.name);
+			  $("#image_up_name3").val(file.name);
             if (!index) {
                 //node
                   //  .append('<br>')
@@ -402,8 +389,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 100,
-        previewMaxHeight: 100,
+        previewMaxWidth: 50,
+        previewMaxHeight: 50,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -414,7 +401,7 @@ $(function () {
 			img_name4 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
-			  //$("#image_up_name").val(file.name);
+			  $("#image_up_name4").val(file.name);
             if (!index) {
                 //node
                   //  .append('<br>')
@@ -486,8 +473,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 100,
-        previewMaxHeight: 100,
+        previewMaxWidth: 50,
+        previewMaxHeight: 50,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -498,7 +485,7 @@ $(function () {
 			img_name5 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
-			  //$("#image_up_name").val(file.name);
+			  $("#image_up_name5").val(file.name);
             if (!index) {
                 //node
                   //  .append('<br>')
@@ -558,30 +545,30 @@ $(function () {
 
 function apply_member()
 {
-	sel_radio 		= $(':radio[name="ink_rip"]:checked').val();
+	//sel_radio 		= $(':radio[name="ink_rip"]:checked').val();
 
-	if (sel_radio === undefined)
+	if (sel_radio == null)
 	{
-		alert('모델에 지원하실 잉크 젤스특 상품을 선택해 주세요.');
+		alert('당신에게 가장 잘 어울릴 것 같은 잉크 젤스틱 컬러를 선택해 주세요.');
 		return false;
 	}
 
 	$("#rip_area").hide();
-	$("#input_area").show();
+	$("#input_area1").show();
 }
 
 function open_pop(param)
 {
 	if (param == "privacy_agree_popup")
 	{
-		var pop_w	= "474px";
-		var pop_h	= "459px";
-		var pop_oh	= "417px";
+		var pop_w	= "589px";
+		var pop_h	= "666px";
+		var pop_oh	= "624px";
 	}else if (param == "adver_agree_popup")
 	{
-		var pop_w	= "474px";
-		var pop_h	= "482px";
-		var pop_oh	= "440px";
+		var pop_w	= "500px";
+		var pop_h	= "477px";
+		var pop_oh	= "435px";
 	}
 	$.colorbox({width:pop_w, height:pop_h, inline:true, opacity:"0.9", scrolling:false, closeButton:false, overlayClose: false, fadeOut: 300, href:"#"+param, onComplete: function(){
 		$("#cboxLoadedContent").height(pop_oh);

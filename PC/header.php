@@ -17,7 +17,8 @@
       <meta property="og:image" content="http://www.belif-factory.com/MOBILE/images/belif_billy_share_new.jpg" />
       <meta property="og:description" content="숨어있는 빌리 찾고 선물받자!">
       <link rel="shortcut icon" type="image/x-icon" href="./images/fabicon.ico" />
-      <title>belif Factory</title>
+      <title>2016 THEFACESHOP LIP MODEL</title>
+      <link href="css/style_yang.css" rel="stylesheet" type="text/css">
       <!-- Generic page styles -->
       <link rel="stylesheet" href="../lib/jQuery-File-Upload/css/style.css">
       <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->

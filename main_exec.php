@@ -39,9 +39,9 @@ switch ($_REQUEST['exec'])
 		$mb_photo5_arr	= explode(".",$_REQUEST['mb_photo5']);
 		$arr_num5			= count($mb_photo5_arr) -1;
 		$mb_photo5		= $mb_serial."_5.".$mb_photo5_arr[$arr_num5];
-		$mb_magazineYN	= $_REQUEST['mb_magazineYN'];
-		$mb_university		= $_REQUEST['mb_university'];
-		$mb_major			= $_REQUEST['mb_major'];
+		//$mb_magazineYN	= $_REQUEST['mb_magazineYN'];
+		//$mb_university		= $_REQUEST['mb_university'];
+		//$mb_major			= $_REQUEST['mb_major'];
 		$mb_media			= $_REQUEST['mb_media'];
 		$sel_radio			= $_REQUEST['sel_radio'];
 		//$media				= $_SESSION['ss_media'];
@@ -55,7 +55,7 @@ switch ($_REQUEST['exec'])
 		{
 			$flag	= "D";
 		}else{
-			$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr,mb_name,mb_phone,mb_sns,mb_photo1,mb_photo2,mb_photo3,mb_photo4,mb_photo5,mb_nominees,mb_magazineYN,mb_university,mb_major,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_sns."','".$mb_photo1."','".$mb_photo2."','".$mb_photo3."','".$mb_photo4."','".$mb_photo5."','".$sel_radio."','".$mb_magazineYN."','".$mb_university."','".$mb_major."','".date("Y-m-d H:i:s")."','".$mb_serial."','".$gubun."','".$mb_media."')";
+			$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr,mb_name,mb_phone,mb_sns,mb_photo1,mb_photo2,mb_photo3,mb_photo4,mb_photo5,mb_nominees,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_sns."','".$mb_photo1."','".$mb_photo2."','".$mb_photo3."','".$mb_photo4."','".$mb_photo5."','".$sel_radio."','".date("Y-m-d H:i:s")."','".$mb_serial."','".$gubun."','".$mb_media."')";
 			$result 	= mysqli_query($my_db, $query);
 			if ($result)
 				$flag	= "Y";
@@ -64,6 +64,23 @@ switch ($_REQUEST['exec'])
 		}
 		// $flag=D ( 중복 ), Y ( 참여완료 ), N ( 오류 )
 		echo $flag;
+	break;
+
+	case "update_info" :
+		$mb_phone			= $_REQUEST['mb_phone'];
+		$mb_university		= $_REQUEST['mb_university'];
+		$mb_major			= $_REQUEST['mb_major'];
+
+		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_university='".$mb_university."', mb_major='".$mb_major."' WHERE mb_phone='".$mb_phone."'";
+		$result 	= mysqli_query($my_db, $query);
+
+		if ($result)
+			$flag	= "Y";
+		else
+			$flag	= "N";
+
+		echo $flag;
+
 	break;
 }
 ?>
