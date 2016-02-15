@@ -19,7 +19,7 @@ function mnv_new_window()
 		$(".mnv_mask").fadeTo(1000, 0.6);
 		$('#mnv_iframe').width($(".bbsthumb_view_admin").width());
 		//$('#mnv_iframe').width($(window).width());
-		$('#mnv_iframe').height($(document).height()*0.192);
+		$('#mnv_iframe').height($(document).height()*0.205);
 		$('#mnv_iframe').css("position","absolute");
 		$('#mnv_iframe').css("top","0");
 		//$('#mnv_iframe').css("margin-top",-$(window).height()/2);
