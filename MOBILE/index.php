@@ -467,7 +467,6 @@ function go_comp()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				$("#input_area2").hide();

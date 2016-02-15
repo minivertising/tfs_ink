@@ -91,7 +91,6 @@ function go_dhni_comp()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				$("#input_area4").hide();
