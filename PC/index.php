@@ -165,7 +165,7 @@
                 <div class="inputs">
                   <div class="one">
                     <div class="one_inner clearfix">
-                      <div><input type="text" alt="셀카1" id="image_up_name1"></div>
+                      <div><input type="text" alt="셀카1" id="image_up_name1" placeholder="셀카1" readonly></div>
                       <div>
                         <!-- <a href="#"><img src="images/popup/btn_sear.jpg" alt=""/></a> -->
                         <span class="btn btn-success fileinput-button">
@@ -183,7 +183,7 @@
                   </div>
                   <div class="one second">
                     <div class="one_inner clearfix">
-                      <div><input type="text"  alt="셀카2" id="image_up_name2"></div>
+                      <div><input type="text"  alt="셀카2" id="image_up_name2" placeholder="셀카2" readonly></div>
                       <div>
                         <!-- <a href="#"><img src="images/popup/btn_sear.jpg" alt=""/></a> -->
                         <span class="btn btn-success fileinput-button">
@@ -203,7 +203,7 @@
                 <div class="inputs right">
                   <div class="one">
                     <div class="one_inner clearfix">
-                      <div><input type="text" alt="타인이 찍어준 사진1" id="image_up_name3"></div>
+                      <div><input type="text" alt="타인이 찍어준 사진1" id="image_up_name3" placeholder="타인이 찍어준 사진1" readonly></div>
                       <div>
                         <!-- <a href="#"><img src="images/popup/btn_sear.jpg" alt=""/></a> -->
                         <span class="btn btn-success fileinput-button">
@@ -221,7 +221,7 @@
                   </div>
                   <div class="one second">
                     <div class="one_inner clearfix">
-                      <div><input type="text" alt="타인이 찍어준 사진2" id="image_up_name4"></div>
+                      <div><input type="text" alt="타인이 찍어준 사진2" id="image_up_name4" placeholder="타인이 찍어준 사진2" readonly></div>
                       <div>
                         <!-- <a href="#"><img src="images/popup/btn_sear.jpg" alt=""/></a> -->
                         <span class="btn btn-success fileinput-button">
@@ -239,7 +239,7 @@
                   </div><!--one second-->
                   <div class="one second">
                     <div class="one_inner clearfix">
-                      <div><input type="text" alt="입술 노메이크업 무보정 사진" id="image_up_name5"></div>
+                      <div><input type="text" alt="입술 노메이크업 무보정 사진" id="image_up_name5" placeholder="입술 노메이크업 무보정 사진" readonly></div>
                       <div>
                         <!-- <a href="#"><img src="images/popup/btn_sear.jpg" alt=""/></a> -->
                         <span class="btn btn-success fileinput-button">

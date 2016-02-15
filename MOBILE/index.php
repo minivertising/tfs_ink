@@ -9,7 +9,7 @@
 
 	//print_r($_SESSION['ss_serial']);
 ?>
-<body style="overflow:hidden;">
+<body style="overflow:auto;">
 <!-- 메인 화면 -->
 <div id="rip_area" class="popup_wrap">
   <div class="p_mid p_position">
