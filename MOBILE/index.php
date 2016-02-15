@@ -13,9 +13,9 @@
 <!-- 메인 화면 -->
 <div id="rip_area" class="popup_wrap">
   <div class="p_mid p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.jpg" /></a>
-    </div>
+    </div> -->
     <div class="block_content main">
       <div class="inner">
         <div class="title img">
@@ -73,9 +73,9 @@
 <!--개인정보입력 작성1-->
 <div id="input_area1" style="display:none;" class="popup_wrap">
   <div class="p_mid p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.jpg" /></a>
-    </div>
+    </div> -->
     <div class="block_content main">
       <div class="inner">
         <div class="title img">
@@ -98,7 +98,7 @@
             <div class="input_one second">
               <div class="inner_input_one clearfix">
                 <div class="label"><img src="images/popup/label_num.jpg" width="85" /></div>
-                <div class="input tel"><input type="tel" name="mb_phone1" id="mb_phone1"><input type="tel" name="mb_phone2" id="mb_phone2"><input type="tel" name="mb_phone3" id="mb_phone3"></div>
+                <div class="input tel"><input type="tel" name="mb_phone1" id="mb_phone1" onkeyup="only_num(this);chk_len(this.value);return false;"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);chk_len2(this.value);return false;"><input type="tel" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this);chk_len3(this.value);return false;"></div>
               </div>
             </div>
             <div class="input_one second">
@@ -245,7 +245,7 @@
         </div>
         <div class="btn_block two">
           <div class="inner_btn_block clearfix">
-            <div class="left"><a href="index.php"><img src="images/popup/btn_before.jpg" /></a></div>
+            <div class="left"><a href="#" onclick="go_prev('1');return false;"><img src="images/popup/btn_before.jpg" /></a></div>
             <div class="right"><a href="#" onclick="go_comp();return false;"><img src="images/popup/btn_comp.jpg" /></a></div>
           </div>
         </div>

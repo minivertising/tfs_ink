@@ -74,7 +74,7 @@
       <div class="tab_menu">
         <div class="inner clearfix">
           <div><a href="#"><img src="images/popup/tab_1_on.jpg" alt=""/></a></div>
-          <div><a href="#"><img src="images/popup/tab_2_off.jpg" alt=""/></a></div>
+          <div><a href="#" onclick="alert('지원자정보를 먼저 입력해 주세요.');"><img src="images/popup/tab_2_off.jpg" alt=""/></a></div>
         </div>
       </div>
       <div class="block_input">
@@ -267,7 +267,7 @@
       <div class="btn_block two">
         <div class="inner clearfix">
           <div class="left">
-            <a href="index.php"><img src="images/popup/btn_before.jpg" alt=""/></a>
+            <a href="index.php" onclick="go_prev('1');return false;"><img src="images/popup/btn_before.jpg" alt=""/></a>
           </div>
           <div class="right">
             <a href="#" onclick="go_comp();return false;"><img src="images/popup/btn_comp.jpg" alt=""/></a>

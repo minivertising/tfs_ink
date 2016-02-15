@@ -557,6 +557,15 @@ function apply_member()
 	$("#input_area1").show();
 }
 
+function go_prev(param)
+{
+	if (param == '1')
+	{
+	$("#input_area2").hide();
+	$("#input_area1").show();
+	}
+}
+
 function open_pop(param)
 {
 	if (param == "privacy_agree_popup")
