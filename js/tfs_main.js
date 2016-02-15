@@ -14,9 +14,9 @@ function mnv_new_window()
 		$(".mnv_mask").height($(document).height());
 		$(".mnv_mask").fadeTo(1000, 0.6);
 		$('#mnv_iframe').show();
-		alert(document.body.scrollTop);
+		alert(document.body.scrollTop + (window.innerHeight/2));
 		alert(window.innerHeight/2);
-		alert(mnv_height);
+		alert(835 / 2);
 		document.body.scrollTop = mnv_height;
 	}
 
