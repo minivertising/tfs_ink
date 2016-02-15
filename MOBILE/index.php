@@ -23,40 +23,40 @@
         </div>
         <div class="libs">
           <div class="clearfix">
-            <a href="#" onclick="sel_lip('PK00','1');">
+            <a href="#" onclick="sel_lip('PK00','1');return false;">
               <img src="images/popup/img_lib_1.jpg" class="lip_thumb1" id="PK00" />
             </a>
-            <a href="#" onclick="sel_lip('PK03','2');">
+            <a href="#" onclick="sel_lip('PK03','2');return false;">
               <img src="images/popup/img_lib_2.jpg" class="lip_thumb2" id="PK03" />
             </a>
-            <a href="#" onclick="sel_lip('CR01','3');">
+            <a href="#" onclick="sel_lip('CR01','3');return false;">
               <img src="images/popup/img_lib_3.jpg" class="lip_thumb3" id="CR01" />
             </a>
-            <a href="#" onclick="sel_lip('OR01','4');">
+            <a href="#" onclick="sel_lip('OR01','4');return false;">
               <img src="images/popup/img_lib_4.jpg" class="lip_thumb4" id="OR01" />
             </a>
-            <a href="#" onclick="sel_lip('PK01','5');">
+            <a href="#" onclick="sel_lip('PK01','5');return false;">
               <img src="images/popup/img_lib_5.jpg" class="lip_thumb5" id="PK01" />
             </a>
-            <a href="#" onclick="sel_lip('PK02','6');">
+            <a href="#" onclick="sel_lip('PK02','6');return false;">
               <img src="images/popup/img_lib_6.jpg" class="lip_thumb6" id="PK02" />
             </a>
-            <a href="#" onclick="sel_lip('PK04','7');">
+            <a href="#" onclick="sel_lip('PK04','7');return false;">
               <img src="images/popup/img_lib_7.jpg" class="lip_thumb7" id="PK04" />
             </a>
-            <a href="#" onclick="sel_lip('BR01','8');">
+            <a href="#" onclick="sel_lip('BR01','8');return false;">
               <img src="images/popup/img_lib_8.jpg" class="lip_thumb8" id="BR01" />
             </a>
-            <a href="#" onclick="sel_lip('RD01','9');">
+            <a href="#" onclick="sel_lip('RD01','9');return false;">
               <img src="images/popup/img_lib_9.jpg" class="lip_thumb9" id="RD01" />
             </a>
-            <a href="#" onclick="sel_lip('RD02','10');">
+            <a href="#" onclick="sel_lip('RD02','10');return false;">
               <img src="images/popup/img_lib_10.jpg" class="lip_thumb10" id="RD02" />
             </a>
-            <a href="#" class="last" onclick="sel_lip('PP01','11');">
+            <a href="#" class="last" onclick="sel_lip('PP01','11');return false;">
               <img src="images/popup/img_lib_11.jpg" class="lip_thumb11" id="PP01" />
             </a>
-            <a href="#" class="last" onclick="sel_lip('PP02','12');">
+            <a href="#" class="last" onclick="sel_lip('PP02','12');return false;">
               <img src="images/popup/img_lib_12.jpg" class="lip_thumb12" id="PP02" />
             </a>
           </div>
