@@ -578,7 +578,7 @@ function chk_len(val)
 {
 	if (val.length == 3)
 	{
-		$("#mb_phone2").focus();
+		$("#mb_phone2").select();
 	}
 }
 
@@ -586,7 +586,7 @@ function chk_len2(val)
 {
 	if (val.length == 4)
 	{
-		$("#mb_phone3").focus();
+		$("#mb_phone3").select();
 	}
 }
 
