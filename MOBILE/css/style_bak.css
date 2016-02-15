@@ -245,34 +245,30 @@ body{
 .upload_file,
 .img_thumb{
 	width:89%;
-	margin:0 auto; 
+	margin:0 auto;
 }
 .upload_file .inner_upload_file,
 .img_thumb .inner_img_thumb{
-	width:100%; 
+	width:100%;
 }
 .upload_file .inner_upload_file .label,
 .img_thumb .inner_img_thumb .label{
 	float:left;
-	width:30%; 
+	width:30%;
 }
 .upload_file .inner_upload_file .btn_up,
 .img_thumb .inner_img_thumb .imgs{
 	float:left;
-	width:70%; 
+	width:70%;
 }
 
 
 .upload_file .inner_upload_file .btn_up div{
-	padding-bottom:5px; 
-}
-
-.upload_file .inner_upload_file .btn_up img{
-	width:100%; border:0px red solid;
+	padding-bottom:5px;
 }
 
 .img_thumb .inner_img_thumb .imgs .inner_imgs{
-	width:100%; 
+	width:100%;
 }
 
 .img_thumb .inner_img_thumb .imgs .inner_imgs .img{

@@ -159,70 +159,70 @@
               <div class="inner_upload_file clearfix">
                 <div class="label">첨부파일</div>
                 <div class="btn_up">
-                  <div>
+                  <div style="padding-bottom:2px">
                     <!-- <a href="#">셀카사진1 사진업로드</a> -->
                     <span class="btn btn-success fileinput-button">
                       <i class="glyphicon glyphicon-plus"></i>
-                      <span><a href="#">셀카사진1 사진업로드</a></span>
+                      <span><a href="#"><img src="images/popup/btn_img_1.jpg" /></a></span>
                       <!-- The file input field used as target for the file upload widget -->
                       <input id="fileupload" type="file" name="files[]" >
                     </span>
                     <!-- The global progress bar -->
-                    <div id="progress" class="progress">
+                    <!-- <div id="progress" class="progress">
                       <div class="progress-bar progress-bar-success"></div>
-                    </div>
+                    </div> -->
                   </div>
-                  <div>
+                  <div style="padding-bottom:2px">
                     <!-- <a href="#">셀카사진2 사진업로드</a> -->
                     <span class="btn btn-success fileinput-button">
                       <i class="glyphicon glyphicon-plus"></i>
-                      <span><a href="#">셀카사진2 사진업로드</a></span>
+                      <span><a href="#"><img src="images/popup/btn_img_2.jpg" /></a></span>
                       <!-- The file input field used as target for the file upload widget -->
                       <input id="fileupload2" type="file" name="files[]" >
                     </span>
                     <!-- The global progress bar -->
-                    <div id="progress" class="progress">
+                    <!-- <div id="progress" class="progress">
                       <div class="progress-bar progress-bar-success"></div>
-                    </div>
+                    </div> -->
                   </div>
-                  <div>
+                  <div style="padding-bottom:2px">
                     <!-- <a href="#">타인이 찍어준 사진1 사진업로드</a> -->
                     <span class="btn btn-success fileinput-button">
                       <i class="glyphicon glyphicon-plus"></i>
-                      <span><a href="#">타인이 찍어준 사진1 사진업로드</a></span>
+                      <span><a href="#"><img src="images/popup/btn_img_3.jpg" /></a></span>
                       <!-- The file input field used as target for the file upload widget -->
                       <input id="fileupload3" type="file" name="files[]" >
                     </span>
                     <!-- The global progress bar -->
-                    <div id="progress" class="progress">
+                    <!-- <div id="progress" class="progress">
                       <div class="progress-bar progress-bar-success"></div>
-                    </div>
+                    </div> -->
                   </div>
-                  <div>
+                  <div style="padding-bottom:2px">
                     <!-- <a href="#">타인이 찍어준 사진2 사진업로드</a> -->
                     <span class="btn btn-success fileinput-button">
                       <i class="glyphicon glyphicon-plus"></i>
-                      <span><a href="#">타인이 찍어준 사진2 사진업로드</a></span>
+                      <span><a href="#"><img src="images/popup/btn_img_4.jpg" /></a></span>
                       <!-- The file input field used as target for the file upload widget -->
                       <input id="fileupload4" type="file" name="files[]" >
                     </span>
                     <!-- The global progress bar -->
-                    <div id="progress" class="progress">
+                    <!-- <div id="progress" class="progress">
                       <div class="progress-bar progress-bar-success"></div>
-                    </div>
+                    </div> -->
                   </div>
-                  <div>
+                  <div style="padding-bottom:2px">
                     <!-- <a href="#">입술 노메이크업 무보정 사진업로드</a> -->
                     <span class="btn btn-success fileinput-button">
                       <i class="glyphicon glyphicon-plus"></i>
-                      <span><a href="#">입술 노메이크업 무보정 사진업로드</a></span>
+                      <span><a href="#"><img src="images/popup/btn_img_5.jpg" /></a></span>
                       <!-- The file input field used as target for the file upload widget -->
                       <input id="fileupload5" type="file" name="files[]" >
                     </span>
                     <!-- The global progress bar -->
-                    <div id="progress" class="progress">
+                    <!-- <div id="progress" class="progress">
                       <div class="progress-bar progress-bar-success"></div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -442,7 +442,7 @@ function go_comp()
 	mb_photo3				= img_name3;
 	mb_photo4				= img_name4;
 	mb_photo5				= img_name5;
-	if (mb_photo1 === null || mb_photo2 === null || mb_photo3 === null || mb_photo4 === null || mb_photo5 === null )
+	if (mb_photo1 === null && mb_photo2 === null && mb_photo3 === null && mb_photo4 === null && mb_photo5 === null )
 	{
 		alert('셀카 2장, 타인이 찍어준 사진 2장, 입술 노메이크업 무보정 사진 1장을 업로드해주세요.');
 		//chk_ins = 0;
