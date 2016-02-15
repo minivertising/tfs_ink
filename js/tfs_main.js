@@ -19,7 +19,7 @@ function mnv_new_window()
 	}else{
 		$(".mnv_mask").width($(document).width());
 		$(".mnv_mask").height($(document).height());
-		$(".mnv_mask").fadeTo(1000, 0);
+		$(".mnv_mask").fadeTo(300, 0.6);
 		$('#mnv_iframe').show();
 		$('#mnv_iframe').center();
 		//document.body.scrollTop = mnv_height;
