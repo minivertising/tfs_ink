@@ -87,7 +87,7 @@
 	<div class="block_close clearfix">
         <a href="#" onclick="mnv_close_event();return false;" class="btn_close"><img src="http://www.thefaceshop-event.com/MOBILE/images/popup/btn_close.jpg" width="25" /></a>
     </div>
-	<iframe src="http://www.thefaceshop-event.com/?media=tfs_event" scrolling="yes" border="0" id="mnv_iframe_content"></iframe>
+	<iframe src="http://www.thefaceshop-event.com/?media=tfs_event" scrolling="yes" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 id="mnv_iframe_content"></iframe>
  </div>
 
 <div class="mnv_mask"></div>
@@ -109,15 +109,19 @@ function mnv_new_window()
 		//$(".mnv_mask").height($(".bbsthumb_view_admin").height());
 		$(".mnv_mask").width($(document).width());
 		$(".mnv_mask").height($(document).height());
+		//$(".mnv_mask").css("margin-left","10px");
+		$(".mnv_mask").css("margin-top","195px");
 		$(".mnv_mask").fadeTo(1000, 0.6);
-		//$('#mnv_iframe').width($(".bbsthumb_view_admin").width());
-		$('#mnv_iframe').width($(window).width());
-		$('#mnv_iframe').height($(document).height()*0.2275);
+		$('#mnv_iframe').width($(".bbsthumb_view_admin").width());
+		//$('#mnv_iframe').width($(window).width());
+		$('#mnv_iframe').height($(document).height()*0.192);
 		$('#mnv_iframe').css("position","absolute");
-		$('#mnv_iframe').css("top","50%");
-		$('#mnv_iframe').css("margin-top",-$(window).height()/2);
-		$('#mnv_iframe').css("left","50%");
-		$('#mnv_iframe').css("margin-left",-$(window).width()/2);
+		$('#mnv_iframe').css("top","0");
+		//$('#mnv_iframe').css("margin-top",-$(window).height()/2);
+		$('#mnv_iframe').css("left","0");
+		//$('#mnv_iframe').css("margin-left",-$(window).width()/2);
+		$('#mnv_iframe').css("margin-left","10px");
+		$('#mnv_iframe').css("margin-top","205px");
 
 		$('#mnv_iframe').show();
 		document.body.scrollTop = 0;
