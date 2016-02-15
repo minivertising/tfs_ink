@@ -1,6 +1,13 @@
 var mnv_rolling_num	= 1;
 var mnv_height = ((document.body.scrollTop + (window.innerHeight/2)) - (835 / 2));
 
+jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+    return this;
+}
+
 function mnv_new_window()
 {
 	//$("#mnv_iframe").show();
@@ -14,6 +21,7 @@ function mnv_new_window()
 		$(".mnv_mask").height($(document).height());
 		$(".mnv_mask").fadeTo(1000, 0.6);
 		$('#mnv_iframe').show();
+		$('#mnv_iframe').center();
 		//document.body.scrollTop = mnv_height;
 	}
 
