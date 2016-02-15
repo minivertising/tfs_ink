@@ -27,9 +27,9 @@
 </div> -->
 <div id="rip_area" class="popup_wrap">
   <div class="p_main p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" onclick="parent.document.location.reload(); " class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
+    </div> -->
     <div class="block_content">
       <div class="block_product">
         <!--첫째줄-->
@@ -64,9 +64,9 @@
 <!--개인정보입력 작성1-->
 <div id="input_area1" style="display:none" class="popup_wrap">
   <div class="p_main input_1 p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
+    </div> -->
     <div class="block_content">
       <div class="title">
         <img src="images/popup/title_sub.png" alt=""/>
@@ -88,7 +88,7 @@
             <ul class="clearfix">
               <li class="label"><img src="images/popup/label_num.jpg" alt=""/></li>
               <li class="in_num">
-                <input type="tel" name="mb_phone1" id="mb_phone1"><input type="tel" name="mb_phone2" id="mb_phone2"><input type="tel" name="mb_phone3" id="mb_phone3" class="last">
+                <input type="tel" name="mb_phone1" id="mb_phone1" onkeyup="only_num(this);chk_len(this.value);return false;"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);chk_len2(this.value);return false;"><input type="tel" name="mb_phone3" id="mb_phone3" class="last" onkeyup="only_num(this);chk_len3(this.value);return false;">
               </li>
             </ul>
             <ul class="clearfix">
@@ -128,9 +128,9 @@
 <!--개인정보입력  작성2-->
 <div id="input_area2" style="display:none" class="popup_wrap">
   <div class="p_main input_1 p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
+    </div> -->
     <div class="block_content">
       <div class="title">
         <img src="images/popup/title_sub.png" alt=""/>
@@ -282,9 +282,9 @@
 <!--개인정보입력 완료 및 대학내일 지원여부 선택-->
 <div id="input_area3" style="display:none" class="popup_wrap">
   <div class="p_main input_2 p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
+    </div> -->
     <div class="block_content">
       <div class="title comp">
         <img src="images/popup/title_sub.png" alt=""/>
@@ -307,9 +307,9 @@
 <!--대학내일 지원 정보 입력 -->
 <div id="input_area4" style="display:none;" class="popup_wrap">
   <div class="p_main input_2 p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
+    </div> -->
     <div class="block_content">
       <div class="title comp">
         <img src="images/popup/title_sub.png" alt=""/>
@@ -354,9 +354,9 @@
 <!--개인정보입력 완료 ( 대학내일 지원정보 완료 ) -->
 <div id="comp_area2" style="display:none;" class="popup_wrap">
   <div class="p_main input_2 p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
+    </div> -->
     <div class="block_content">
       <div class="title comp">
         <img src="images/popup/title_sub.png" alt=""/>
@@ -378,9 +378,9 @@
 <!--개인정보입력 완료 ( 대학내일 지원안함 ) -->
 <div id="comp_area1" style="display:none;" class="popup_wrap">
   <div class="p_main input_2 p_position">
-    <div class="block_close clearfix">
+    <!-- <div class="block_close clearfix">
       <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
+    </div> -->
     <div class="block_content">
       <div class="title comp">
         <img src="images/popup/title_sub.png" alt=""/>
@@ -450,7 +450,7 @@ function go_comp()
 	mb_photo3				= img_name3;
 	mb_photo4				= img_name4;
 	mb_photo5				= img_name5;
-	if (mb_photo1 === null || mb_photo2 === null || mb_photo3 === null || mb_photo4 === null || mb_photo5 === null )
+	if (mb_photo1 === null && mb_photo2 === null && mb_photo3 === null && mb_photo4 === null && mb_photo5 === null )
 	{
 		alert('셀카 2장, 타인이 찍어준 사진 2장, 입술 노메이크업 무보정 사진 1장을 업로드해주세요.');
 		//chk_ins = 0;
@@ -480,6 +480,9 @@ function go_comp()
 			{
 				$("#input_area2").hide();
 				$("#input_area3").show();
+			}else if (response == "D"){
+				alert('이벤트에 이미 참여하셨습니다.');
+				location.href='index.php';
 			}else{
 				alert("참여자가 많아 지연되고 있습니다. 다시 응모해 주세요.");
 				location.href="index.php";
