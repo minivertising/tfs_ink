@@ -131,7 +131,7 @@
       </div>
       <div class="block_input">
         <div class="inner">
-          <div class="txt"><img src="images/popup/txt_input_2.jpg" alt=""/></div>
+          <div class="txt"><img src="images/popup/txt_input_2_new.jpg" alt=""/></div>
           <div class="upload_pic">
             <div class="thumb">
               <div class="inner_thumbs">
