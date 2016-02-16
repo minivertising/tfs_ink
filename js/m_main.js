@@ -42,6 +42,7 @@ function go_next()
 		return false;
 	}
 
+	/*
 	if (mb_sns == "")
 	{
 		alert('SNS 주소를 입력해 주세요.');
@@ -49,14 +50,7 @@ function go_next()
 		//chk_ins = 0;
 		return false;
 	}
-
-	if (mb_sns == "")
-	{
-		alert('SNS 주소를 입력해 주세요.');
-		$("#mb_sns").focus();
-		//chk_ins = 0;
-		return false;
-	}
+	*/
 
 	if (chk_privacy_flag == 0)
 	{
