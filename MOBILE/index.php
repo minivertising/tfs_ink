@@ -2,7 +2,8 @@
 	include_once   "./header.php";
 	$serial	= BC_getSerial();
 
-	//$ss_media	= $_SESSION['ss_media'];
+	if (isset($_SESSION['ss_media']))
+		$ss_media	= $_SESSION['ss_media'];
 	session_unset();
 	//if (!$_SESSION['ss_serial'])
 		$_SESSION['ss_serial']	= $serial;
