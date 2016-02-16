@@ -136,7 +136,7 @@
 
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
-	$buyer_list_query = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_name <> 'admin' ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_name <> 'admin' AND mb_name <> 'tfs_admin' ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 
 	$res = mysqli_query($my_db, $buyer_list_query);
 
