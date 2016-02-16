@@ -472,6 +472,9 @@ function go_comp()
 			{
 				$("#input_area2").hide();
 				$("#input_area3").show();
+			}else if (response == "D"){
+				alert('이벤트에 이미 참여하셨습니다.');
+				location.href='index.php';
 			}else{
 				alert("참여자가 많아 지연되고 있습니다. 다시 응모해 주세요.");
 				location.href="index.php";
