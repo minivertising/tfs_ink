@@ -151,19 +151,19 @@
 		//$shop_res = mysqli_query($my_db, $shop_query);
 		//$shop_name = mysqli_fetch_array(mysqli_query($my_db, $shop_query));
 		$mb_photo1_arr	= explode(".",$buyer_info[$key]['mb_photo1']);
-		if ($mb_photo1_arr[1] == "")
+		if ($mb_photo1_arr[1] != "")
 			$mb_photo1	= $buyer_info[$key]['mb_photo1'];
 		$mb_photo2_arr	= explode(".",$buyer_info[$key]['mb_photo2']);
-		if ($mb_photo2_arr[1] == "")
+		if ($mb_photo2_arr[1] != "")
 			$mb_photo2	= $buyer_info[$key]['mb_photo2'];
 		$mb_photo3_arr	= explode(".",$buyer_info[$key]['mb_photo3']);
-		if ($mb_photo3_arr[1] == "")
+		if ($mb_photo3_arr[1] != "")
 			$mb_photo3	= $buyer_info[$key]['mb_photo3'];
 		$mb_photo4_arr	= explode(".",$buyer_info[$key]['mb_photo4']);
-		if ($mb_photo4_arr[1] == "")
+		if ($mb_photo4_arr[1] != "")
 			$mb_photo4	= $buyer_info[$key]['mb_photo4'];
 		$mb_photo5_arr	= explode(".",$buyer_info[$key]['mb_photo5']);
-		if ($mb_photo5_arr[1] == "")
+		if ($mb_photo5_arr[1] != "")
 			$mb_photo5	= $buyer_info[$key]['mb_photo5'];
 ?>
               <tr>
