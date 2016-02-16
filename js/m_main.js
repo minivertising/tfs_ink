@@ -599,6 +599,18 @@ function chk_len3(val)
 	}
 }
 
+$("#mb_phone1").keyup(function(e){
+	e.preventDefault();
+});
+
+$("#mb_phone2").keyup(function(e){
+	e.preventDefault();
+});
+
+$("#mb_phone3").keyup(function(e){
+	e.preventDefault();
+});
+
 function only_num(obj)
 {
 	var inText = obj.value;
