@@ -72,43 +72,42 @@
 <!-- 메인 화면 -->
 
 <!--개인정보입력 작성1-->
-<div id="input_area1" style="display:none;" class="popup_wrap">
-  <div class="p_mid p_position">
-    <!-- <div class="block_close clearfix">
-      <a href="#" class="btn_close"><img src="images/popup/btn_close.jpg" /></a>
-    </div> -->
-    <div class="block_content main">
-      <div class="inner">
-        <div class="title img">
-          <img src="images/popup/title_sub.jpg" />
-        </div>
-        <div class="tab img">
-          <img src="images/popup/tab_menu_1.jpg" />
-        </div>
-        <div class="input_block">
-          <div class="inner_input_block">
-            <div class="txt">
-              <img src="images/popup/txt_input.jpg" />
-            </div>
-            <div class="input_one">
-              <div class="inner_input_one clearfix">
-                <div class="label"><img src="images/popup/label_name.jpg" width="85" /></div>
-                <div class="input"><input type="text" name="mb_name" id="mb_name"></div>
-              </div>
-            </div>
-            <div class="input_one second">
-              <div class="inner_input_one clearfix">
-                <div class="label"><img src="images/popup/label_num.jpg" width="85" /></div>
-                <div class="input tel"><input type="tel" name="mb_phone1" id="mb_phone1" onkeyup="only_num(this);chk_len(this.value);return false;"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);chk_len2(this.value);return false;"><input type="tel" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this);chk_len3(this.value);return false;"></div>
-              </div>
-            </div>
-            <div class="input_one second">
-              <div class="inner_input_one clearfix">
-                <div class="label"><img src="images/popup/label_sns.jpg" width="85" /></div>
-                <div class="input"><input type="text" name="mb_sns" id="mb_sns"></div>
-              </div>
-            </div>
-          </div>
+	<div id="input_area1" style="display:none;" class="popup_wrap">
+   	  	<div class="p_mid p_position">
+            <!-- <div class="block_close clearfix">
+                <a href="#" class="btn_close"><img src="images/popup/btn_close.jpg" /></a>
+            </div> -->
+            <div class="block_content main">
+            	<div class="inner">
+                    <div class="title img">
+                    	<img src="images/popup/title_sub.jpg" />
+                    </div>
+                    <div class="tab img">
+                    	<img src="images/popup/tab_menu_1.jpg" />
+                    </div>
+                    <div class="input_block">
+                    	<div class="inner_input_block">
+                            <div class="input_one">
+                            	<div class="inner_input_one clearfix">
+                                	<div class="label"><img src="images/popup/label_name.jpg" width="85" /></div>
+                                    <div class="input"><input type="text" name="mb_name" id="mb_name"></div>
+                                </div>
+                            </div>
+                            <div class="input_one second">
+                            	<div class="inner_input_one clearfix">
+                                	<div class="label"><img src="images/popup/label_num.jpg" width="85" /></div>
+                                    <div class="input tel"><input type="tel" name="mb_phone1" id="mb_phone1" onkeyup="only_num(this);chk_len(this.value);return false;"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);chk_len2(this.value);return false;"><input type="tel" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this);chk_len3(this.value);return false;"></div>
+                                </div>
+                            </div>
+                            <div class="input_one second">
+                            	<div class="inner_input_one clearfix">
+                                	<div class="label"><img src="images/popup/label_sns.jpg" width="85" /></div>
+                                    <div class="input"><input type="text" name="mb_sns" id="mb_sns"></div>
+                                </div>
+                            </div>
+                       		<div class="text_01"><img src="images/popup/text_01.jpg" alt=""/></div>
+                        </div>
+                           
           <div class="check_block">
             <div class="inner_check_block clearfix">
               <div class="check"><a href="#" onclick="privacy_check();return false;"><img src="images/popup/check_off.jpg" width="20" name="privacy_agree" id="privacy_agree" /></a></div>
@@ -121,44 +120,49 @@
               <div class="btn_detail"><a href="#" onclick="open_pop('adver_agree_popup');return false;"><img src="images/popup/btn_detail.jpg" width="55" /></a></div>
             </div>
           </div>                        
-        </div>
+                    </div>
+                    <div class="text_noti"><img src="images/popup/text_noti_01.png" alt=""/></div>
         <div class="btn_block two">
           <div class="inner_btn_block clearfix">
             <div class="left"><a href="index.php"><img src="images/popup/btn_before.jpg" /></a></div>
             <div class="right"><a href="#" onclick="go_next();return false;"><img src="images/popup/btn_next.jpg" /></a></div>
           </div>
         </div>
-        <div class="bottom img">
-          <img src="images/popup/bottom.jpg" />
+
+					<div class="bottom img">
+                    	<img src="images/popup/bottom.jpg" />
+                    </div>
+                </div><!--inner-->
+            </div>
         </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
+	</div>
 <!--개인정보입력 작성1-->
 
 <!--개인정보입력 작성2-->
-<div id="input_area2" style="display:none" class="popup_wrap">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="#" class="btn_close"><img src="images/popup/btn_close.jpg" /></a>
-    </div>
-    <div class="block_content main">
-      <div class="inner">
-        <div class="title img">
-          <img src="images/popup/title_sub.jpg" />
-        </div>
-        <div class="tab img">
-          <img src="images/popup/tab_menu_2.jpg" />
-        </div>
-        <div class="block_upload">
-          <div class="inner_block_upload">
-            <div class="img_exam">
-              <img src="images/popup/img_exam.jpg" />
-            </div>
-            <div class="upload_file">
-              <div class="inner_upload_file clearfix">
-                <div class="label">첨부파일</div>
+	<div id="input_area2" style="display:none" class="popup_wrap">
+   	  	<div class="p_mid p_position">
+            <!-- <div class="block_close clearfix">
+                <a href="#" class="btn_close"><img src="images/popup/btn_close.jpg" /></a>
+            </div> -->
+            <div class="block_content main">
+            	<div class="inner">
+                    <div class="title img">
+                    	<img src="images/popup/title_sub.jpg" />
+                    </div>
+                    <div class="tab img">
+                    	<img src="images/popup/tab_menu_2.jpg" />
+                    </div>
+                    
+                    
+					<div class="block_upload">
+                    	<div class="inner_block_upload">
+                        	<div class="img_exam">
+                            	<img src="images/popup/img_exam.jpg" />
+                            </div>
+                            
+                            <div class="upload_file">
+                            	<div class="inner_upload_file clearfix">
+                                	<div class="label">첨부파일</div>
                 <div class="btn_up">
                   <div style="padding-bottom:2px">
                     <!-- <a href="#">셀카사진1 사진업로드</a> -->
@@ -228,35 +232,38 @@
                 </div>
               </div>
             </div>
-            <div class="img_thumb">
-              <div class="inner_img_thumb clearfix">
-                <div class="label">미리보기</div>
-                <div class="imgs">
-                  <div class="inner_imgs clearfix">
+                            
+                            <div class="img_thumb">
+                            	<div class="inner_img_thumb clearfix">
+                                	<div class="label">미리보기</div>
+                                    <div class="imgs">
+                                    	<div class="inner_imgs clearfix">
                     <div id="files" class="img"></div>
                     <div id="files2" class="img"></div>
                     <div id="files3" class="img"></div>
                     <div id="files4" class="img"></div>
                     <div id="files5" class="img"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="btn_block two">
-          <div class="inner_btn_block clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text_noti"><img src="images/popup/text_noti_02.png" alt=""/></div>
+                    <div class="btn_block two">
+                    	<div class="inner_btn_block clearfix">
             <div class="left"><a href="#" onclick="go_prev('1');return false;"><img src="images/popup/btn_before.jpg" /></a></div>
             <div class="right"><a href="#" onclick="go_comp();return false;"><img src="images/popup/btn_comp.jpg" /></a></div>
-          </div>
+                        </div>
+                    </div>
+					<div class="bottom img">
+                    	<img src="images/popup/bottom.jpg" />
+                    </div>
+                </div><!--inner-->
+            </div>
         </div>
-        <div class="bottom img">
-          <img src="images/popup/bottom.jpg" />
-        </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
+	</div>
 <!--개인정보입력 작성2-->
 
 <!--개인정보입력 완료 및 대학내일 지원여부 선택-->
