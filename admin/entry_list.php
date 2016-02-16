@@ -147,6 +147,11 @@
 
 	foreach($buyer_info as $key => $val)
 	{
+		$mb_photo1	= "";
+		$mb_photo2	= "";
+		$mb_photo3	= "";
+		$mb_photo4	= "";
+		$mb_photo5	= "";
 		//$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE idx='".$buyer_info[$key]['mb_shop']."'";
 		//$shop_res = mysqli_query($my_db, $shop_query);
 		//$shop_name = mysqli_fetch_array(mysqli_query($my_db, $shop_query));
@@ -172,7 +177,7 @@
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
                 <td>
 <?
-	if ($mb_photo1)
+	if ($mb_photo1 )
 	{
 ?>
 				  <a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo1']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo1']?>"></a>
