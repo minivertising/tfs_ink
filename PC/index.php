@@ -329,7 +329,7 @@
       <div class="btn_block two">
         <div class="inner clearfix">
           <div class="left">
-            <a href="index.php"><img src="images/popup/btn_before.jpg" alt=""/></a>
+            <a href="#"  onclick="go_choice();return false;"><img src="images/popup/btn_before.jpg" alt=""/></a>
           </div>
           <div class="right">
             <a href="#" onclick="go_dhni_comp();return false;"><img src="images/popup/btn_comp.jpg" alt=""/></a>

@@ -327,7 +327,7 @@
         </div>
         <div class="btn_block two">
           <div class="inner_btn_block clearfix">
-            <div class="left"><a href="index.php"><img src="images/popup/btn_before.jpg" /></a></div>
+            <div class="left"><a href="#" onclick="go_choice();return false;"><img src="images/popup/btn_before.jpg" /></a></div>
             <div class="right"><a href="#" onclick="go_dhni_comp();return false;"><img src="images/popup/btn_comp.jpg" /></a></div>
           </div>
         </div>                    

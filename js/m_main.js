@@ -112,6 +112,13 @@ function comp_proc(param)
 	}
 }
 
+function go_choice()
+{
+	$("#input_area4").hide();
+	$("#input_area3").show();
+	mb_magazineYN = "N";
+}
+
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
