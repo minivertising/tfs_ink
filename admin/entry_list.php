@@ -150,16 +150,76 @@
 		//$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE idx='".$buyer_info[$key]['mb_shop']."'";
 		//$shop_res = mysqli_query($my_db, $shop_query);
 		//$shop_name = mysqli_fetch_array(mysqli_query($my_db, $shop_query));
+		$mb_photo1_arr	= explode(".",$buyer_info[$key]['mb_photo1']);
+		if ($mb_photo1_arr[1])
+			$mb_photo1	= $buyer_info[$key]['mb_photo1'];
+		$mb_photo2_arr	= explode(".",$buyer_info[$key]['mb_photo2']);
+		if ($mb_photo2_arr[1])
+			$mb_photo2	= $buyer_info[$key]['mb_photo2'];
+		$mb_photo3_arr	= explode(".",$buyer_info[$key]['mb_photo3']);
+		if ($mb_photo3_arr[1])
+			$mb_photo3	= $buyer_info[$key]['mb_photo3'];
+		$mb_photo4_arr	= explode(".",$buyer_info[$key]['mb_photo4']);
+		if ($mb_photo4_arr[1])
+			$mb_photo4	= $buyer_info[$key]['mb_photo4'];
+		$mb_photo5_arr	= explode(".",$buyer_info[$key]['mb_photo5']);
+		if ($mb_photo5_arr[1])
+			$mb_photo5	= $buyer_info[$key]['mb_photo5'];
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
                 <td><?php echo $buyer_info[$key]['mb_name']?></td>
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo1']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo1']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo2']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo2']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo3']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo3']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo4']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo4']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo5']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo5']?>"></a></td>
+                <td>
+<?
+	if ($mb_photo1)
+	{
+?>
+				  <a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo1']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo1']?>"></a>
+<?
+	}
+?>
+				</td>
+                <td>
+<?
+	if ($mb_photo2)
+	{
+?>
+				  <a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo2']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo2']?>"></a>
+<?
+	}
+?>
+				</td>
+                <td>
+<?
+	if ($mb_photo3)
+	{
+?>
+				  <a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo3']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo3']?>"></a>
+<?
+	}
+?>
+				</td>
+                <td>
+<?
+	if ($mb_photo4)
+	{
+?>
+				  <a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo4']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo4']?>"></a>
+<?
+	}
+?>
+				</td>
+                <td>
+<?
+	if ($mb_photo5)
+	{
+?>
+				  <a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo5']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo5']?>"></a>
+<?
+	}
+?>
+				</td>
                 <td><?php echo $buyer_info[$key]['mb_sns']?></td>
                 <td><?php echo $buyer_info[$key]['mb_nominees']?></td>
                 <td><?php echo $buyer_info[$key]['mb_media']?></td>
