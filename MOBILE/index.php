@@ -96,7 +96,7 @@
             <div class="input_one second">
               <div class="inner_input_one clearfix">
                 <div class="label"><img src="images/popup/label_num.jpg" width="85" /></div>
-                <div class="input tel"><input type="tel" name="mb_phone1" id="mb_phone1" onkeyup="only_num(this);chk_len(this.value);return false;"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);chk_len2(this.value);return false;"><input type="tel" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this);chk_len3(this.value);return false;"></div>
+                <div class="input tel"><input type="tel" name="mb_phone1" id="mb_phone1" onkeyup="only_num(this);chk_len(this.value);"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);chk_len2(this.value);"><input type="tel" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this);chk_len3(this.value);"></div>
               </div>
             </div>
             <div class="input_one second">
