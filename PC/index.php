@@ -111,6 +111,8 @@
 </div>
 <!--END : 개인정보입력  작성1-->
 
+
+
 <!--개인정보입력  작성2-->
 <div id="input_area2" style="display:none" class="popup_wrap">
   <div class="p_main input_1 p_position">
@@ -134,21 +136,21 @@
             <div class="thumb">
               <div class="inner_thumbs">
                 <div class="label"><img src="images/popup/label_thumb.jpg" alt=""/></div>
-                <div class="pics">
-                  <div class="inner_pics clearfix">
-                    <div id="files" class="pic files"></div>
-                    <div id="files2" class="pic files"></div>
-                    <div id="files3" class="pic files"></div>
-                    <div id="files4" class="pic files"></div>
-                    <div id="files5" class="pic files"></div>
+                  <div class="pics">
+                    <div class="inner_pics clearfix">
+                      <div id="files" class="pic files"></div>
+                      <div id="files2" class="pic files"></div>
+                      <div id="files3" class="pic files"></div>
+                      <div id="files4" class="pic files"></div>
+                      <div id="files5" class="pic files"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="upload">
-              <div class="inner_upload clearfix">
-                <div class="label"><img src="images/popup/label_file.jpg" alt=""/></div>
-                <div class="inputs">
+              <div class="upload">
+                <div class="inner_upload clearfix">
+                  <div class="label"><img src="images/popup/label_file.jpg" alt=""/></div>
+                    <div class="inputs">
                   <div class="one">
                     <div class="one_inner clearfix">
                       <div><input type="text" alt="셀카1" id="image_up_name1" placeholder="셀카1" readonly></div>
@@ -263,7 +265,9 @@
     </div>
   </div>
 </div>
-<!--개인정보입력  작성2-->
+	<!--개인정보입력  작성2-->
+
+
 
 <!--개인정보입력 완료 및 대학내일 지원여부 선택-->
 <div id="input_area3" style="display:none" class="popup_wrap">
