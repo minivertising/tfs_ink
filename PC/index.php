@@ -2,7 +2,8 @@
 	include_once   "./header.php";
 	$serial	= BC_getSerial();
 
-	//$ss_media	= $_SESSION['ss_media'];
+	if (isset($_SESSION['ss_media']))
+		$ss_media	= $_SESSION['ss_media'];
 	session_unset();
 	//if (!$_SESSION['ss_serial'])
 		$_SESSION['ss_serial']	= $serial;
@@ -10,21 +11,6 @@
 	//print_r($_SESSION['ss_serial']);
 ?>
 <body>
-<!-- <div id="rip_area">
-  PK00 핑크밤 <input type="radio" name="ink_rip" value="PK00"><br />
-  PK03 핑크쇼크 <input type="radio" name="ink_rip" value="PK03"><br />
-  CR01 로코피치 <input type="radio" name="ink_rip" value="CR01"><br />
-  OR01 베이비오렌지 <input type="radio" name="ink_rip" value="OR01"><br />
-  PK01 핑크바이올렛 <input type="radio" name="ink_rip" value="PK01"><br />
-  PK02 로즈피오니 <input type="radio" name="ink_rip" value="PK02"><br />
-  PK04 핑크오마쥬 <input type="radio" name="ink_rip" value="PK04"><br />
-  BR01 인디안로즈 <input type="radio" name="ink_rip" value="BR01"><br />
-  RD01 잉크레드 <input type="radio" name="ink_rip" value="RD01"><br />
-  RD02 레드씽 <input type="radio" name="ink_rip" value="RD02"><br />
-  PP01 베이베리 <input type="radio" name="ink_rip" value="PP01"><br />
-  PP02 톡마젠타 <input type="radio" name="ink_rip" value="PP02"><br />
-  <a href="#" onclick="apply_member();return false;">지원하기</a>
-</div> -->
 <div id="rip_area" class="popup_wrap">
   <div class="p_main p_position">
     <!-- <div class="block_close clearfix">
