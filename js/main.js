@@ -142,7 +142,7 @@ $(function () {
 		//del_fileview();
 		$("#files").html("");
         //data.context = $('<div/>').appendTo('#files');
-        data.context = ('#files').append('<div/>');
+        data.context = $('#files').append('<div/>');
         $.each(data.files, function (index, file) {
 			console.log(file);
 			img_name1 = file.name;
