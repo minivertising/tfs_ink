@@ -554,6 +554,7 @@ function apply_member()
 	}
 
 	$("#rip_area").hide();
+	$("#input_area1").css("margin-top","100px");
 	$("#input_area1").show();
 }
 
