@@ -8,6 +8,10 @@ jQuery.fn.center = function () {
     return this;
 }
 
+$(document).ready(function(){
+	$(".editArea").css("background","#f7f5f6");
+});
+
 function mnv_new_window()
 {
 	//$("#mnv_iframe").show();
