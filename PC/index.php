@@ -65,7 +65,6 @@
       </div>
       <div class="block_input">
         <div class="inner">
-          <div class="txt"><img src="images/popup/txt_input_1.jpg" alt=""/></div>
           <div class="input_box">
             <ul class="clearfix">
               <li class="label"><img src="images/popup/label_name.jpg" alt=""/></li>
@@ -81,6 +80,7 @@
               <li class="label"><img src="images/popup/label_sns.jpg" alt=""/></li>
               <li><input type="text" name="mb_sns" id="mb_sns"></li>
             </ul>
+            <div class="text"><img src="images/popup/text_01.jpg" alt=""/></div>    
           </div>
           <div class="check_box">
             <div class="inner clearfix">
@@ -95,6 +95,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="txt_notice">
+        <img src="images/popup/txt_input_1.png" alt=""/>
       </div>
       <div class="btn_block two">
         <div class="inner clearfix">
