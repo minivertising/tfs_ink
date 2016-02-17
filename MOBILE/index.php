@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="btn_select img">
-          <a href="#" onclick="apply_member();"><img src="images/popup/btn_select.jpg" /></a>
+          <a href="#" onclick="apply_member();return true;"><img src="images/popup/btn_select.jpg" /></a>
         </div>
       </div><!--inner-->
     </div>
