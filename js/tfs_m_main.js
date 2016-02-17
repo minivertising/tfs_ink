@@ -16,7 +16,7 @@ function mnv_new_window()
 		$(".mnv_mask").height($(document).height());
 		//$(".mnv_mask").css("margin-left","10px");
 		$(".mnv_mask").css("margin-top","195px");
-		$(".mnv_mask").fadeTo(1000, 0.9);
+		$(".mnv_mask").fadeTo(1000, 1);
 		$('#mnv_iframe').width($(".bbsthumb_view_admin").width());
 		//$('#mnv_iframe').width($(window).width());
 		$('#mnv_iframe').height($(document).height()*0.195);
@@ -101,7 +101,7 @@ function show_menu()
 	}else{
 		$(".mnv_mask").width($(document).width());
 		$(".mnv_mask").height($(document).height());
-		$(".mnv_mask").fadeTo(1000, 0.9);
+		$(".mnv_mask").fadeTo(1000, 1);
 
 		//$('#mobile_menu').css('right','-200px');
 		// 이동위치값 지정
