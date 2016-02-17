@@ -141,8 +141,7 @@ $(function () {
 		// 파일 삭제
 		//del_fileview();
 		$("#files").html("");
-        //data.context = $('<div/>').appendTo('#files');
-        data.context = $('#files').append('<div/>');
+        data.context = $('<div/>').appendTo('#files');
         $.each(data.files, function (index, file) {
 			console.log(file);
 			img_name1 = file.name;
@@ -156,8 +155,8 @@ $(function () {
 				//uploadButton.clone(true).data(data);
 				data.submit();
             }
-
             node.appendTo(data.context);
+			//$('#files').append(data.context);
         });
     }).on('fileuploadprocessalways', function (e, data) {
         var index = data.index,

@@ -136,20 +136,27 @@
         <div class="inner">
           <div class="txt"><img src="images/popup/txt_input_2_new.jpg" alt=""/></div>
           <div class="upload_pic">
+<?
+	if ($IE7== "N" && $IE8== "N")
+	{
+?>
             <div class="thumb">
               <div class="inner_thumbs">
                 <div class="label"><img src="images/popup/label_thumb.jpg" alt=""/></div>
-                  <div class="pics">
-                    <div class="inner_pics clearfix">
-                      <div id="files" class="pic files"></div>
-                      <div id="files2" class="pic files"></div>
-                      <div id="files3" class="pic files"></div>
-                      <div id="files4" class="pic files"></div>
-                      <div id="files5" class="pic files"></div>
-                    </div>
+                <div class="pics">
+                  <div class="inner_pics clearfix">
+                    <div id="files" class="pic files"></div>
+                    <div id="files2" class="pic files"></div>
+                    <div id="files3" class="pic files"></div>
+                    <div id="files4" class="pic files"></div>
+                    <div id="files5" class="pic files"></div>
                   </div>
                 </div>
               </div>
+            </div>
+<?
+	}
+?>
               <div class="upload">
                 <div class="inner_upload clearfix">
                   <div class="label"><img src="images/popup/label_file.jpg" alt=""/></div>
